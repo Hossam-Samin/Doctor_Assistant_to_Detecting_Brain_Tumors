@@ -1,0 +1,2 @@
+No, this case have not tumor
+Yes, this case have tumor
