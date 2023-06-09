@@ -123,9 +123,8 @@ flutter:
    - assets/images/doctor-splash screen.svg
    - assets/images/clinic-splash screen.svg
    - assets/images/messages.svg
-   - assets/images/WhatsApp Image 2022-12-23 at 1.07.12 PM.jpeg
    - assets/images/undraw_doctor_kw-5-l.svg
-   - assets/images/hossam.jpg
+  
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
