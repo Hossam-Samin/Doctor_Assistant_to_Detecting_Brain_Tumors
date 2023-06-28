@@ -1,13 +1,13 @@
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/presentation/screens/settings_screen/question_scrren.dart';
-import 'package:flutter_application_1/presentation/screens/settings_screen/support_screen.dart';
-
 import '../Home_App/home_App.dart';
 import '../maps_screen/Map_pagee.dart';
 import '../notifications_screen/notifications_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import 'question_scrren.dart';
+import 'support_screen.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({Key? key}) : super(key: key);

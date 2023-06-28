@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/presentation/screens/detecting_images/result_detection_page.dart';
+
 import '../../../../business_logic/detection_model/detection_cubit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../detection_page.dart';
+import '../result_detection_page.dart';
 
 class BrainScreen extends StatefulWidget {
   const BrainScreen({Key? key}) : super(key: key);

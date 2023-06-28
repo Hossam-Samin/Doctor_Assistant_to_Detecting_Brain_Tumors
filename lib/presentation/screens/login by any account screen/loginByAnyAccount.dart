@@ -1,8 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/presentation/screens/app_layout/app_layout.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
+
+import '../app_layout/app_layout.dart';
 
 class LoginByAnyAccount extends StatefulWidget {
   const LoginByAnyAccount({key}) : super(key: key);

@@ -1,9 +1,9 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/business_logic/favirote_model/favirote_model.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import '../../../business_logic/favirote_model/db_helper.dart';
+import '../../../business_logic/favirote_model/favirote_model.dart';
 import '../../../business_logic/favirote_model/favirote_provider.dart';
 
 class FaviroteScreen extends StatefulWidget {

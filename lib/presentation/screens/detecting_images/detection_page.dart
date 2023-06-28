@@ -1,10 +1,6 @@
 // ignore_for_file: prefer_interpolation_to_compose_strings
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/business_logic/favirote_model/db_helper.dart';
-import 'package:flutter_application_1/business_logic/favirote_model/favirote_provider.dart';
-import 'package:flutter_application_1/presentation/screens/detecting_images/result_detection_page.dart';
-import 'package:flutter_application_1/presentation/screens/favirote_screen/favirote_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
@@ -14,8 +10,13 @@ import '../../../business_logic/detection_model/detection_state.dart';
 import 'package:lottie/lottie.dart';
 import 'package:badges/badges.dart' as badges;
 
+import '../../../business_logic/favirote_model/db_helper.dart';
 import '../../../business_logic/favirote_model/favirote_model.dart';
 import 'package:intl/intl.dart';
+
+import '../../../business_logic/favirote_model/favirote_provider.dart';
+import '../favirote_screen/favirote_screen.dart';
+import 'result_detection_page.dart';
 
 class DetectionHome extends StatefulWidget {
   String lottieAnimationName;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/presentation/screens/app_layout/app_layout.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../app_layout/app_layout.dart';
 import '../verification login_screen/verificationLogin.dart';
 
 class Verification extends StatefulWidget {

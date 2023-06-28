@@ -1,8 +1,9 @@
-import 'package:flutter_application_1/business_logic/favirote_model/favirote_model.dart';
 import 'package:sqflite/sqflite.dart';
 import 'dart:io' as io;
 import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart';
+
+import 'favirote_model.dart';
 
 class DBHelper {
   static Database? _db;

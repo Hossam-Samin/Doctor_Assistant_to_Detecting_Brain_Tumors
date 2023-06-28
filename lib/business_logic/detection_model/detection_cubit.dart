@@ -1,11 +1,12 @@
 import 'dart:io';
 import 'dart:typed_data';
-import 'package:flutter_application_1/business_logic/detection_model/detection_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:tflite/tflite.dart';
 import 'package:image_picker/image_picker.dart';
+
+import 'detection_state.dart';
 
 class AppCubit extends Cubit<AppState> {
   AppCubit() : super(IntiAppState());
