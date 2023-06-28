@@ -1,4 +1,4 @@
-package com.example.flutter_application_1
+package com.brain_tumors_detection
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:241648570071:android:5d76779f4e07f96944aa92",
         "android_client_info": {
-          "package_name": "com.example.flutter_application_1"
+          "package_name": "com.brain_tumors_detection"
         }
       },
       "oauth_client": [
