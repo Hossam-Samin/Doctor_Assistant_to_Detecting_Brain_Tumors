@@ -1,11 +1,8 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/presentation/screens/classify_images/result_with_output_of_detection.dart';
-import 'package:image_picker/image_picker.dart';
+import 'package:flutter_application_1/presentation/screens/detecting_images/result_detection_page.dart';
 import '../../../../business_logic/detection_model/detection_cubit.dart';
-import '../detection_lab.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import '../detection_page.dart';
 
 class BrainScreen extends StatefulWidget {
   const BrainScreen({Key? key}) : super(key: key);
@@ -15,17 +12,8 @@ class BrainScreen extends StatefulWidget {
 }
 
 class _BrainScreenState extends State<BrainScreen> {
-  File? file;
-  ImagePicker imagePicker = ImagePicker();
-
-  Result1 res = Result1(cubit: AppCubit(), patient: "Hossam Samin");
-
-  getCamera() async {
-    var img = await imagePicker.getImage(source: ImageSource.camera);
-    setState(() {
-      file = File(img!.path);
-    });
-  }
+  ResultDetection res =
+      ResultDetection(cubit: AppCubit(), patient: "Hossam Samin");
 
   @override
   Widget build(BuildContext context) {
@@ -83,7 +71,7 @@ class _BrainScreenState extends State<BrainScreen> {
                             fontFamily: "JF-Flat"),
                       ),
                       const Text(
-                        'Detection with accuracy 99 %.',
+                        'Detection with accuracy 98 %.',
                         style: TextStyle(
                             fontSize: 18,
                             color: Colors.grey,
@@ -102,7 +90,7 @@ class _BrainScreenState extends State<BrainScreen> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => Result(
+                                      builder: (context) => DetectionHome(
                                         numResults: 4,
                                         threshold: 0.2,
                                         imageMean: 244.0,
@@ -153,22 +141,38 @@ class _BrainScreenState extends State<BrainScreen> {
                                   color: Colors.pink.withOpacity(.5),
                                   child: IconButton(
                                     onPressed: () {
-                                      getCamera();
+                                      // getCamera();
+                                      // cubit.pickImgFromCamera(
+                                      //    imageMean: 220.0,
+                                      //     imageStd: 220.0,
+                                      //     threshold: 0.6,
+                                      //     numResult: 5
+
+                                      // )
+                                      AppCubit.get(context).pickImgFromCamera(
+                                          imageMean: 220.0,
+                                          imageStd: 220.0,
+                                          threshold: 0.6,
+                                          numResult: 5);
+
                                       Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (context) => Result(
+                                            builder: (context) => DetectionHome(
                                                 lottieAnimationName:
                                                     'brain tumor',
-                                                imageMean: 244.0,
-                                                imageStd: 244.0,
-                                                numResults: 4,
-                                                threshold: 0.2),
+                                                imageMean: 220.0,
+                                                imageStd: 220.0,
+                                                numResults: 5,
+                                                threshold: 0.6),
                                           ));
+                                      AppCubit.get(context)
+                                          .loadBrainTumourModel();
+                                      AppCubit.get(context).clearImage();
                                     },
                                     icon: const Icon(
                                       Icons.camera_alt_rounded,
-                                      color: Colors.white,
+                                      color: Color.fromARGB(255, 255, 255, 255),
                                       size: 80,
                                     ),
                                   ),

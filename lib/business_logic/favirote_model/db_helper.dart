@@ -2,15 +2,18 @@ import 'package:flutter_application_1/business_logic/favirote_model/favirote_mod
 import 'package:sqflite/sqflite.dart';
 import 'dart:io' as io;
 import 'package:path_provider/path_provider.dart';
+import 'package:path/path.dart';
 
 class DBHelper {
   static Database? _db;
 
   Future<Database?> get db async {
-    if (_db != null) {
+    if (_db == null) {
+      _db = await initDatabase();
+      return _db!;
+    } else {
       return _db!;
     }
-    _db = await initDatabase();
   }
 
   initDatabase() async {
@@ -21,13 +24,30 @@ class DBHelper {
   }
 
   _onCreate(Database db, int version) async {
-    await db.execute("Create Table Cart (ID primary Keym Product ID)");
+    await db.execute(
+        "CREATE TABLE FaviroteModel (id INTEGER PRIMARY KEY AUTOINCREMENT,patientName TEXT NOT NULL, result TEXT NOT NULL, rate DOUBLE NOT NULL, date TEXT NOT NULL)");
   }
 
-  join(String path, String s) {}
   Future<FaviroteModel> insert(FaviroteModel faviroteModel) async {
     var dbClient = await db;
     await dbClient!.insert('faviroteModel', faviroteModel.toMap());
     return faviroteModel;
+  }
+
+  Future<List<FaviroteModel>> getCartList() async {
+    var dbClient = await db;
+    final List<Map<String, Object?>> resQuery =
+        await dbClient!.query('FaviroteModel');
+    return resQuery.map((e) => FaviroteModel.fromMap(e)).toList();
+  }
+
+  Future<int> delete(int id) async {
+    var dbClient = await db;
+
+    return await dbClient!.delete(
+      'FaviroteModel',
+      where: ' id = ?',
+      whereArgs: [id],
+    );
   }
 }

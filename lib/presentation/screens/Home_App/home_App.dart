@@ -92,9 +92,14 @@ class _HomeState extends State<Home> {
                         const SizedBox(
                           height: 30,
                         ),
-                        SvgPicture.asset(
-                          "assets/images/medical_image1.svg",
-                          height: 170,
+                        const CircleAvatar(
+                          backgroundColor: Colors.deepPurple,
+                          radius: 105,
+                          child: CircleAvatar(
+                            backgroundImage:
+                                AssetImage("assets/images/brain2.jpg"),
+                            radius: 100,
+                          ),
                         ),
 
                         // ignore: prefer_const_constructors

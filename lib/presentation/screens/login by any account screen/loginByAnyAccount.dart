@@ -27,13 +27,14 @@ class _LoginByAnyAccountState extends State<LoginByAnyAccount> {
 
 /*Login by google */
 
-  Future<UserCredential> signInWithGoogle() async {
+  Future<UserCredential?> signInWithGoogle() async {
     // Trigger the authentication flow
-    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+    final GoogleSignInAccount? googleSignInAccount =
+        await GoogleSignIn().signIn();
 
     // Obtain the auth details from the request
     final GoogleSignInAuthentication? googleAuth =
-        await googleUser?.authentication;
+        await googleSignInAccount?.authentication;
 
     // Create a new credential
     final credential = GoogleAuthProvider.credential(
@@ -88,7 +89,7 @@ class _LoginByAnyAccountState extends State<LoginByAnyAccount> {
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
       child: InkWell(
         onTap: () async {
-          UserCredential googleCred = await signInWithGoogle();
+          UserCredential? googleCred = await signInWithGoogle();
           // ignore: use_build_context_synchronously
           Navigator.of(context).push(MaterialPageRoute(
             builder: (context) => const AppLayout(),

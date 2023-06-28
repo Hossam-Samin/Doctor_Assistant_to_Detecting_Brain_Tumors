@@ -1,10 +1,8 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/presentation/screens/chat_screen/chat_login_screen.dart';
-
-import '../classify_images/brain_tumor/brain_tumor.dart';
+import '../detecting_images/brain_tumor/brain_tumor.dart';
 import '../favirote_screen/favirote_screen.dart';
-
 import '../settings_screen/settings_screen.dart';
 
 class AppLayout extends StatefulWidget {

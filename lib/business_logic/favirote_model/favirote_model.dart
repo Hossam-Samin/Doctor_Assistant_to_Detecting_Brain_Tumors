@@ -1,64 +1,39 @@
+import 'dart:io';
+
 class FaviroteModel {
+  dynamic id;
   String? patientName;
   String? result;
-  String? rate;
-  // String? image;
+  double? rate;
   String? date;
-  String? time;
+  // File? image;
 
-  FaviroteModel(
-      {required this.result,
-      required this.rate,
-      required this.patientName,
-      // required this.image,
-      required this.date,
-      required this.time});
+  FaviroteModel({
+    this.id,
+    required this.patientName,
+    required this.result,
+    required this.rate,
+    required this.date,
+    // required this.image,
+  });
 
-  FaviroteModel.fromMap(Map<String, dynamic> fromMap) {
-    result = fromMap['label'];
-    rate = fromMap['rate'];
+  FaviroteModel.fromMap(Map<dynamic, dynamic> fromMap) {
+    id = fromMap['id'];
     patientName = fromMap['patientName'];
+    result = fromMap['result'];
+    rate = fromMap['rate'];
     date = fromMap['date'];
-    time = fromMap['time'];
+    // image = fromMap['image'];
   }
 
-  Map<String, Object> toMap() {
+  Map<String, Object?> toMap() {
     return {
-      'label': result!,
-      'rate': rate!,
-      'patientName': patientName!,
-      'date': date!,
-      'time': time!,
+      'id': id,
+      'patientName': patientName,
+      'result': result,
+      'rate': rate,
+      'date': date,
+      // 'image': image,
     };
   }
 }
-
-
- 
-
-
-// import 'package:flutter/material.dart';
-// import 'package:hive/hive.dart';
-// // part 'favirote_model.g.dart';
-
-// @HiveType(typeId: 0)
-// class FaviroteModel extends HiveObject {
-//   // final String patientName;
-//   @HiveField(0)
-//   final String label;
-//   @HiveField(1)
-//   final String rate;
-//   @HiveField(2)
-//   final String image;
-//   @HiveField(3)
-//   final String date;
-//   @HiveField(4)
-//   final String time;
-
-//   FaviroteModel(
-//       {required this.label,
-//       required this.rate,
-//       required this.image,
-//       required this.date,
-//       required this.time});
-// }

@@ -7,7 +7,6 @@ import 'business_logic/detection_model/detection_cubit.dart';
 import 'business_logic/detection_model/detection_state.dart';
 import 'business_logic/detection_model/detiction_observer.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
-
 import 'business_logic/favirote_model/favirote_provider.dart';
 
 void main() async {
@@ -24,17 +23,8 @@ void main() async {
           enableVibration: true,
           playSound: true,
           onlyAlertOnce: true,
-          defaultColor: const Color(0xFF9D50DD),
-          ledColor: Colors.white,
-          importance: NotificationImportance.Max,
-          channelShowBadge: true,
           criticalAlerts: true,
         )
-      ],
-      channelGroups: [
-        NotificationChannelGroup(
-            channelGroupKey: 'high_importance channel_group',
-            channelGroupName: 'Group 1')
       ],
       debug: true);
 
@@ -42,7 +32,6 @@ void main() async {
   BlocOverrides.runZoned(() {
     runApp(MyApp(app: AppCubit()));
   }, blocObserver: MyBlocObserver());
-  // runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -52,7 +41,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-        create: (index) => FavProvider(),
+        create: (_) => FavProvider(),
         child: Builder(builder: (BuildContext context) {
           return BlocProvider<AppCubit>(
               create: (context) => app,
@@ -67,6 +56,5 @@ class MyApp extends StatelessWidget {
                     );
                   }));
         }));
-    // );
   }
 }

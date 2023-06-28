@@ -97,11 +97,6 @@ class AppCubit extends Cubit<AppState> {
     print(outputs);
     print(imageStd);
     emit(FinalResultState());
-    // try {
-
-    // } catch (exclassify) {
-    //   print(exclassify);
-    // }
   }
 
   //make iimage and output = null function

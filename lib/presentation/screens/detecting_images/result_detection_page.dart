@@ -1,21 +1,26 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
-
+import 'package:screenshot/screenshot.dart';
 import '../../../business_logic/detection_model/detection_cubit.dart';
+import '../../../business_logic/favirote_model/db_helper.dart';
+import 'package:intl/intl.dart';
 
-class Result1 extends StatelessWidget {
-  Result1({Key? key, required this.cubit, required this.patient})
+class ResultDetection extends StatelessWidget {
+  ResultDetection({Key? key, required this.cubit, required this.patient})
       : super(key: key);
 
   AppCubit cubit;
-  final String patient;
-  var time = DateTime.now();
+  String patient;
+  String datetime =
+      DateFormat("hh:mm a      dd/MM/yyyy").format(DateTime.now());
+  final controllerr = ScreenshotController();
+  TextEditingController patientController = TextEditingController();
+  DBHelper? dbHelper = DBHelper();
+
   @override
   Widget build(BuildContext context) {
-    double height = 620;
     return Container(
-      height: height * 0.8,
+      height: 480,
       margin: const EdgeInsets.only(left: 20, right: 20, top: 10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
@@ -28,9 +33,9 @@ class Result1 extends StatelessWidget {
       child: Column(
         children: [
           Image.file(
-            cubit.iimage! as File,
+            cubit.iimage as File,
             fit: BoxFit.contain,
-            height: height * 0.45,
+            height: 280,
             width: 350,
           ),
           Padding(
@@ -39,7 +44,7 @@ class Result1 extends StatelessWidget {
             ),
             child: Container(
               width: double.infinity,
-              height: height * 0.2,
+              height: 150,
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
@@ -56,7 +61,6 @@ class Result1 extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Spacer(),
                   Text(
                     "Patient Name: $patient",
                     style: const TextStyle(
@@ -84,17 +88,10 @@ class Result1 extends StatelessWidget {
                       fontFamily: "JF-Flat",
                     ),
                   ),
-                  Text(
-                    "Curent Time -> ${time.hour} : ${time.minute} : ${time.second}",
-                    style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500,
-                        fontFamily: "JF-Flat"),
-                  ),
                   const Spacer(),
                   Text(
-                    "Date -> ${time.day} - ${time.month} - ${time.year}",
+                    "Time & Date: $datetime ",
+                    // {time.hour} : ${time.minute} : ${time.second}
                     style: const TextStyle(
                         color: Colors.white,
                         fontSize: 18,
