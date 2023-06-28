@@ -1,4 +1,4 @@
-# flutter_application_1
+# brain_tumors_detection
 
 A new Flutter project.
 
