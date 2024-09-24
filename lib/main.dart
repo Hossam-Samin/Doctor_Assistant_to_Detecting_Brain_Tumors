@@ -1,6 +1,5 @@
 import 'package:brain_tumors_detection/presentation/screens/Splash_Screen/splash_screen.dart';
 import 'package:flutter/material.dart';
-
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';

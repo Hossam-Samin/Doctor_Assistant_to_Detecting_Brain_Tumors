@@ -277,7 +277,7 @@ class _SignInState extends State<SignIn> {
                     borderRadius: BorderRadius.circular(15),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.deepOrange,
+                        backgroundColor: Colors.deepOrange,
                         padding: const EdgeInsets.only(
                             top: 10, bottom: 10, left: 10, right: 10),
                       ),

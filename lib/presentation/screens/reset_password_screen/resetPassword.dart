@@ -131,7 +131,8 @@ class _ResetPasswordState extends State<ResetPassword> {
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.redAccent,
+                    backgroundColor: Colors.redAccent,
+                    // primary: Colors.redAccent,
                   ),
                   child: const Text(
                     "Save",

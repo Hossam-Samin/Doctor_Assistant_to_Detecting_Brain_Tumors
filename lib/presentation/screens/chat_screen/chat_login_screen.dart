@@ -131,7 +131,8 @@ class _ChatLoginState extends State<ChatLogin> {
                               borderRadius: BorderRadius.circular(20),
                               child: ElevatedButton(
                                   style: ElevatedButton.styleFrom(
-                                      primary: Colors.redAccent,
+                                    backgroundColor: Colors.redAccent,
+                                      // primary: Colors.redAccent,
                                       padding: const EdgeInsets.only(
                                           top: 10,
                                           bottom: 10,

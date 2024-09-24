@@ -205,7 +205,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                         Navigator.pop(context);
                                       },
                                       style: ElevatedButton.styleFrom(
-                                          primary: Colors.orange,
+                                          backgroundColor: Colors.orange,
                                           padding: const EdgeInsets.only(
                                               top: 10,
                                               bottom: 10,
@@ -234,7 +234,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                       style: OutlinedButton.styleFrom(
                                           side: const BorderSide(
                                               color: Colors.orangeAccent),
-                                          primary: Colors.orangeAccent,
+                                          backgroundColor: Colors.orangeAccent,
                                           padding: const EdgeInsets.only(
                                               top: 10,
                                               bottom: 10,

@@ -129,7 +129,8 @@ class _LoginState extends State<Login> {
                       borderRadius: BorderRadius.circular(15),
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.deepPurple,
+                          backgroundColor: Colors.deepPurple,
+                            // primary: Colors.deepPurple,
                             padding: const EdgeInsets.only(
                                 left: 40, right: 40, top: 10, bottom: 10)),
                         child: const Text(

@@ -121,7 +121,7 @@ class _VerificationLoginState extends State<VerificationLogin> {
                   borderRadius: BorderRadius.circular(16),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        primary: Colors.redAccent,
+                        backgroundColor: Colors.redAccent,
                         padding: const EdgeInsets.only(
                             left: 20, right: 20, top: 10, bottom: 10)),
                     child: const Text(

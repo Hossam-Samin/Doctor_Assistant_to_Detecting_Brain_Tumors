@@ -174,7 +174,8 @@ class _GoogleMapsPgeState extends State<GoogleMapsPge> {
                   });
             },
             style: ElevatedButton.styleFrom(
-                primary: Colors.redAccent.withOpacity(0.5),
+              backgroundColor: Colors.redAccent.withOpacity(0.5),
+                // primary: Colors.redAccent.withOpacity(0.5),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(13))),
             child: const Text(

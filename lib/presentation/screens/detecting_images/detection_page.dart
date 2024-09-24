@@ -194,7 +194,8 @@ class _DetectionHomeState extends State<DetectionHome> {
                                     child: ElevatedButton(
                                       style: ElevatedButton.styleFrom(
                                         minimumSize: const Size(100, 50),
-                                        primary: Colors.lightBlue,
+                                        backgroundColor: Colors.lightBlue,
+                                        // primary: Colors.lightBlue,
                                         elevation: 10,
                                         shape: RoundedRectangleBorder(
                                           borderRadius:
@@ -226,7 +227,8 @@ class _DetectionHomeState extends State<DetectionHome> {
                                     child: ElevatedButton(
                                       style: ElevatedButton.styleFrom(
                                         minimumSize: const Size(100, 50),
-                                        primary: Colors.lightBlue,
+                                        backgroundColor: Colors.lightBlue,
+                                        // primary: Colors.lightBlue,
                                         elevation: 10,
                                         shape: RoundedRectangleBorder(
                                           borderRadius:

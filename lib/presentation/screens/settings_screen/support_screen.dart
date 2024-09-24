@@ -145,12 +145,12 @@ class _SupportState extends State<Support> {
                         _supportsController.clear();
                       },
                       style: ElevatedButton.styleFrom(
-                          primary: Colors.deepPurple,
+                          backgroundColor: Colors.deepPurple,
                           padding: const EdgeInsets.only(
                               left: 40, right: 40, top: 10, bottom: 10)),
                       child: const Text(
                         "Submit",
-                        style: TextStyle(fontSize: 20, fontFamily: "JF-Flat"),
+                        style: TextStyle(fontSize: 20, fontFamily: "JF-Flat",color: Colors.white),
                       ),
                     ),
                   ),

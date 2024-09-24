@@ -27,7 +27,7 @@ apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 apply plugin: 'com.google.gms.google-services'
 
 android {
-    compileSdkVersion 33
+    compileSdkVersion 34
     // compileSdkVersion flutter.compileSdkVersion
     // ndkVersion flutter.ndkVersion
 
@@ -54,7 +54,7 @@ android {
         applicationId "com.brain_tumors_detection"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-build-configuration.
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 33
         multiDexEnabled true
         // minSdkVersion flutter.minSdkVersion
